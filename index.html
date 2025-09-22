@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ego Store — Termos & Privacidade</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <svg class="discord-logo" viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="#5865F2" d="M60.2 4.6A58.4 58.4 0 0046.3.5a41.8 41.8 0 00-1.9 4.1c-5.6-1.7-11.5-1.7-17.1 0A42.6 42.6 0 0023.4.5 58.4 58.4 0 008.8 4.6C2.5 19.2 1.6 32.4 4.2 44.1c5.4 4.1 10.6 6.8 15.6 8.4 1.2-.9 2.3-1.9 3.3-3 2.4 1 4.9 1.6 7.5 1.9 2.6.3 5.2.3 7.8 0 2.6-.3 5.1-.9 7.5-1.9 1 1.1 2.1 2.1 3.3 3 5-.6 10.2-4.3 15.6-8.4 2.6-11.7 1.7-24.9-5-39.5zM24.6 37.7c-3 0-5.4-2.8-5.4-6.1 0-3.3 2.4-6.1 5.4-6.1 3 0 5.5 2.8 5.4 6.1.1 3.3-2.4 6.1-5.4 6.1zm21.9 0c-3 0-5.4-2.8-5.4-6.1 0-3.3 2.4-6.1 5.4-6.1 3 0 5.4 2.8 5.4 6.1-.1 3.3-2.5 6.1-5.4 6.1z"/>
+    </svg>
+    <h1 class="title">Ego Store</h1>
+  </div>
+  <nav class="nav">
+    <a href="#" onclick="mostrar('termos')">Termos</a>
+    <a href="#" onclick="mostrar('privacidade')">Privacidade</a>
+    <a href="https://discord.gg/UxkMvrtvzc" target="_blank">Suporte</a>
+  </nav>
+</header>
+
+<main class="container">
+  <article id="conteudo" class="card neon">
+    <!-- Conteúdo carregado aqui -->
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-line"></div>
+  <p>© <span id="year"></span> Ego Store • Todos os direitos reservados</p>
+</footer>
+
+<script>
+const conteudos = {
+  termos: `
+    <h2>Termos de Uso da Ego Store</h2>
+    <section class="term">
+      <h3>Sobre Nossos Produtos</h3>
+      <p>Nossa loja oferece produtos e conteúdos virtuais relacionados a jogos. A descrição de cada item inclui informações como nome, características e outras particularidades.</p>
+    </section>
+    <section class="term">
+      <h3>Do Processo de Compra</h3>
+      <p>Preços e Pagamento: Os preços dos produtos são exibidos em Reais (R$) e incluem impostos.</p>
+      <p>Entrega: A entrega dos produtos será realizada pelo nosso canal de entregas e através de um ticket criado na categoria "COMPRAS" desse servidor. O prazo de entrega é de 72 horas e começa a contar a partir da confirmação do pagamento.</p>
+    </section>
+    <section class="term">
+      <h3>Do Reembolso</h3>
+      <p>O Reembolso total será fornecido se o produto não for entregue dentro do prazo estipulado, basta abrir um ticket em #📩・suporte e comprovar a situação. Não fornecemos reembolso por arrependimento.</p>
+    </section>
+    <section class="term">
+      <h3>Da Segurança</h3>
+      <p>As vendas são efetuadas apenas dentro desse servidor pelos nossos bots e responsáveis. Qualquer venda fora disso não tem nosso consentimento nem nosso suporte.</p>
+    </section>
+    <section class="term">
+      <h3>Da Denúncia</h3>
+      <p>Se presenciar qualquer atividade que não siga as políticas do nosso servidor ou a legislação brasileira, basta denunciar no #📩・suporte para tomarmos as devidas providências.</p>
+    </section>
+    <section class="term">
+      <h3>Da Privacidade dos Dados</h3>
+      <p>Valorizamos sua privacidade. As informações que você nos fornece são usadas exclusivamente para processar sua compra e oferecer um melhor atendimento. Em hipótese alguma, compartilharemos seus dados com terceiros sem o seu consentimento.</p>
+    </section>
+    <section class="term">
+      <h3>Aceite dos Termos</h3>
+      <p>A realização de uma compra em nosso site implica na sua total aceitação destes Termos de Uso. Caso não concorde com eles, por favor, não finalize sua compra.</p>
+    </section>
+  `,
+  privacidade: `
+    <h2>Política de Privacidade da Ego Store</h2>
+    <section class="term">
+      <p>Valorizamos sua privacidade. As informações que você nos fornece são usadas exclusivamente para processar sua compra e oferecer um melhor atendimento.</p>
+    </section>
+    <section class="term">
+      <h3>Coleta de Dados</h3>
+      <p>Podemos coletar informações básicas de contato e dados necessários para concluir a compra.</p>
+    </section>
+    <section class="term">
+      <h3>Uso dos Dados</h3>
+      <p>Seus dados servem para garantir a entrega correta dos produtos, suporte e segurança das transações.</p>
+    </section>
+    <section class="term">
+      <h3>Proteção</h3>
+      <p>Utilizamos medidas de segurança para manter suas informações protegidas contra acessos não autorizados.</p>
+    </section>
+    <section class="term">
+      <h3>Compartilhamento</h3>
+      <p>Nunca venderemos ou compartilharemos seus dados sem seu consentimento, exceto quando exigido por lei.</p>
+    </section>
+    <section class="term">
+      <p>Ao utilizar nossos serviços, você concorda com esta Política de Privacidade.</p>
+    </section>
+  `
+};
+
+function mostrar(chave){
+  document.getElementById('conteudo').innerHTML = conteudos[chave];
+}
+
+mostrar('termos'); // Carrega termos por padrão
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
